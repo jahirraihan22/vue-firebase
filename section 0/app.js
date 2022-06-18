@@ -26,6 +26,11 @@ const app = Vue.createApp({
             this.y = e.offsetY
         }
     },
+    computed: {
+        filteredVehicle() {
+            return this.vehicles.filter((vehicle) => vehicle.isFav)
+        }
+    },
 })
 
 app.mount('#app')

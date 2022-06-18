@@ -28,7 +28,7 @@
       <div
         class="box"
         :class="{ fav : vehicle.isFav }"
-        v-for="vehicle in vehicles"
+        v-for="vehicle in filteredVehicle"
       >
         <div class="" @click="addToFav(vehicle)">
           <img style="width: 200px" :src="vehicle.image" alt="" />
