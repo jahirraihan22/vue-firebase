@@ -30,10 +30,14 @@
         :class="{ fav : vehicle.isFav }"
         v-for="vehicle in vehicles"
       >
-        <img style="width: 100px" :src="vehicle.image" alt="" />
-        <h4>Model: {{ vehicle.model }}</h4>
-        <h4>Manufacturer: {{ vehicle.manufanturer}}</h4>
-        <h3>Type: {{ vehicle.type }}</h3>
+        <div class="" @click="addToFav(vehicle.id)">
+          <img style="width: 200px" :src="vehicle.image" alt="" />
+          <h4>Model: {{ vehicle.model }}</h4>
+          <h4>Manufacturer: {{ vehicle.manufanturer}}</h4>
+          <h3>Type: {{ vehicle.type }}</h3>
+          <p v-if="vehicle.isFav">Favourite</p>
+          <p v-else>I don't Like it</p>
+        </div>
       </div>
     </div>
 
