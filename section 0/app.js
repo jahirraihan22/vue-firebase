@@ -1,5 +1,11 @@
 const app = Vue.createApp({
-    template: "<h2>From template</h2>"
+    data() {
+        return {
+            title: 'The Holy Qur\'an',
+            author: 'ALLAH Almighty',
+            messenger: 'Prophet Muhammad (PBUH)'
+        }
+    }
 })
 
 app.mount('#app')
