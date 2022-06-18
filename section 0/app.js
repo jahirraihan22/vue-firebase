@@ -1,11 +1,13 @@
 const app = Vue.createApp({
     data() {
         return {
-            // show: false,
-            // btnText: 'show',
-            // title: 'The Holy Qur\'an',
-            // owner: 'ALLAH Almighty',
-            // messenger: 'Prophet Muhammad (PBUH)',
+            vehicles: [
+                { type: "bike", model: "R 15", manufanturer: "Yamaha" },
+                { type: "car", model: "Premio", manufanturer: "Toyota" },
+                { type: "bike", model: "GSX", manufanturer: "Suzuki" },
+                { type: "car", model: "A 5", manufanturer: "Audi" },
+                { type: "bike", model: "Exmotion", manufanturer: "Honda" },
+            ],
             x: 0,
             y: 0
         }

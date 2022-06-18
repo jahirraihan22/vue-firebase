@@ -22,18 +22,12 @@
   <body>
     <h1>Hello Vue</h1>
     <div id="app">
-      <!-- <div v-if="show">
-        <p>
-          Book: {{ title }} <br />
-          Owner: {{ owner }} <br />
-          Messenger: {{ messenger }}
-        </p>
+      <div class="box" v-for="vehicle in vehicles">
+        <h4>Model: {{ vehicle.model }}</h4>
+        <h4>Manufacturer: {{ vehicle.manufanturer}}</h4>
+        <h3>Type: {{ vehicle.type }}</h3>
       </div>
-      <div v-else>
-        <p>Click show to see content</p>
-      </div>
-      <button @click="toggleShow">{{ btnText }}</button>
-      <br /> -->
+      <br />
       <!-- 4 different mouse event -->
       <div class="box" @mouseover="handleMouseEvent($event,5)">
         Mouseover (enter)
