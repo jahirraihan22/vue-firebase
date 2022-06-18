@@ -17,32 +17,23 @@
         margin: 20px;
         display: inline-block;
       }
+      .fav {
+        background: pink;
+      }
     </style>
   </head>
   <body>
     <h1>Hello Vue</h1>
     <div id="app">
-      <!-- attribute binding -->
-      <!-- <a v-bind:href="url" target="_blank">Jahir Raihan</a>
-      <br /> -->
-      <!-- alternate -->
-      <a :href="url" target="_blank">Jahir Raihan</a>
-      <br />
-      <div class="box" v-for="vehicle in vehicles">
+      <div
+        class="box"
+        :class="{ fav : vehicle.isFav }"
+        v-for="vehicle in vehicles"
+      >
         <img style="width: 100px" :src="vehicle.image" alt="" />
         <h4>Model: {{ vehicle.model }}</h4>
         <h4>Manufacturer: {{ vehicle.manufanturer}}</h4>
         <h3>Type: {{ vehicle.type }}</h3>
-      </div>
-      <br />
-      <!-- 4 different mouse event -->
-      <div class="box" @mouseover="handleMouseEvent($event,5)">
-        Mouseover (enter)
-      </div>
-      <div class="box" @mouseleave="handleMouseEvent">Mouse Leave</div>
-      <div class="box" @dblclick="handleMouseEvent">Double click</div>
-      <div class="box" @mousemove="handlemousemove">
-        position - {{ x }} {{ y }}
       </div>
     </div>
 
