@@ -1,14 +1,17 @@
 const app = Vue.createApp({
     data() {
         return {
+            show: false,
+            btnText: 'show',
             title: 'The Holy Qur\'an',
-            author: 'ALLAH Almighty',
+            owner: 'ALLAH Almighty',
             messenger: 'Prophet Muhammad (PBUH)'
         }
     },
     methods: {
-        clickFunction() { 
-            alert("I love Allah and his prophet Muhammad pbuh");
+        toggleShow() {
+            this.show = !this.show;
+            this.btnText = this.show ? "hide" : "show";
         }
     },
 })

@@ -12,14 +12,17 @@
   <body>
     <h1>Hello Vue</h1>
     <div id="app">
-      <p>
-        Book: {{ title }} <br />
-        Author: {{ author }} <br />
-        Messenger: {{ messenger }}
-      </p>
-      <!-- <button v-on:click="clickFunction">Whom do you love ?</button> -->
-      <button @click="clickFunction">Whom do you love ?</button>
-      <!-- <div v-on:click="">press me</div> -->
+      <div v-if="show">
+        <p>
+          Book: {{ title }} <br />
+          Owner: {{ owner }} <br />
+          Messenger: {{ messenger }}
+        </p>
+      </div>
+      <div v-else>
+        <p>Click show to see content</p>
+      </div>
+      <button @click="toggleShow">{{ btnText }}</button>
     </div>
 
     <script src="app.js"></script>
