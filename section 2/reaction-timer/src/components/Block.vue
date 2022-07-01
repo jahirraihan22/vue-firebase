@@ -27,7 +27,7 @@ export default {
     },
     stopTimer() {
       clearInterval(this.timer);
-      console.log(this.reactionTime);
+      this.$emit("end", this.reactionTime);
     },
   },
   //   updated() {
@@ -45,5 +45,6 @@ export default {
   text-align: center;
   padding: 100px 0;
   margin: 40px auto;
+  cursor: pointer;
 }
 </style>
